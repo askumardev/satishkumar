@@ -1,2 +1,2 @@
-### [askumar.github.io](https://askumardev.github.io/satishkumar/)
+### [askumar.github.io/satishkumar](https://askumardev.github.io/satishkumar/)
 ---
