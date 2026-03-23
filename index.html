@@ -2,48 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Satish Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satish Kumar | Profile</title>
   <style>
-    body {
+    /* Reset */
+    * {
       margin: 0;
-      font-family: Arial;
-      background: linear-gradient(120deg, #1e3c72, #2a5298);
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00d4ff;
+      text-decoration: none;
+    }
+
+    header {
       text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #ccc;
     }
 
     .container {
-      margin-top: 100px;
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 0;
     }
 
-    h1 {
-      font-size: 50px;
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
     }
 
-    p {
-      font-size: 20px;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: white;
-      color: #2a5298;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 20px;
+    h2 {
+      margin-bottom: 10px;
+      border-left: 4px solid #00d4ff;
+      padding-left: 10px;
     }
 
-    .btn:hover {
-      background: #ddd;
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 8px 12px;
+      border-radius: 20px;
+      background: rgba(0, 212, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .project {
+      padding: 15px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      background: rgba(0, 212, 255, 0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Satish Kumar</h1>
+    <p>Senior Software Engineer | Ruby on Rails | Python | React</p>
+  </header>
+
   <div class="container">
-    <h1>Hi, I'm Satish 👋</h1>
-    <p>Senior Software Engineer | Rails | Python | AI Enthusiast</p>
-    <a href="https://github.com/askumardev" class="btn">View My GitHub</a>
+
+    <div class="card">
+      <h2>About Me</h2>
+      <p>
+        Passionate developer with experience building scalable applications. 
+        I love working with backend systems and exploring new technologies.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Ruby on Rails</span>
+        <span class="skill">Python</span>
+        <span class="skill">React</span>
+        <span class="skill">Docker</span>
+        <span class="skill">PostgreSQL</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Project One</h3>
+          <p>Short description of your project.</p>
+        </div>
+        <div class="project">
+          <h3>Project Two</h3>
+          <p>Short description of your project.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: askumar.dev@outlook.com</p>
+      <p>GitHub: <a href="github.com/askumardev"></a></p>
+    </div>
+
   </div>
+
+  <footer>
+    <p>© 2026 Satish Kumar | Built with ❤️</p>
+  </footer>
+
 </body>
 </html>
