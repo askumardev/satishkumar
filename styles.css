@@ -1,105 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
 
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+body {
+  background: #0d1117;
+  color: #e6edf3;
+}
 
-    body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      line-height: 1.6;
-    }
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    a {
-      color: #00d4ff;
-      text-decoration: none;
-    }
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #2ea043;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-    }
+/* BUTTONS */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-    header h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
+.btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  text-decoration: none;
+  transition: 0.3s;
+  min-width: 150px;
+  text-align: center;
+}
 
-    header p {
-      margin-top: 10px;
-      color: #ccc;
-    }
+.btn.primary {
+  background: #238636;
+  color: white;
+}
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px 0;
-    }
+.btn.ghost {
+  color: #e6edf3;
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(88,166,255,0.4);
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+/* SECTION */
+.section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
 
-    h2 {
-      margin-bottom: 10px;
-      border-left: 4px solid #00d4ff;
-      padding-left: 10px;
-    }
+/* SKILLS CAROUSEL */
+.skills-carousel {
+  overflow: hidden;
+  margin-top: 20px;
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.skills-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
 
-    .skill {
-      padding: 8px 12px;
-      border-radius: 20px;
-      background: rgba(0, 212, 255, 0.2);
-      font-size: 0.9rem;
-    }
+.skill-box {
+  min-width: 140px;
+  padding: 15px;
+  background: #161b22;
+  border-radius: 10px;
+  border: 1px solid #222;
+  text-align: center;
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-    .project {
-      padding: 15px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.07);
-      transition: 0.3s;
-    }
+/* EXPERIENCE */
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .project:hover {
-      background: rgba(0, 212, 255, 0.15);
-    }
+.exp-card {
+  background: #161b22;
+  border: 1px solid #222;
+  padding: 20px;
+  border-radius: 10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+}
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
+.company {
+  color: #58a6ff;
+}
+
+.exp-points {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  gap: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  background: #161b22;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.project-meta {
+  font-size: 0.8rem;
+  color: #9da7b3;
+  margin: 8px 0;
+}
+
+.tech-stack span {
+  background: #21262d;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.link {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+}
